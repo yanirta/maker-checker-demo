@@ -1,0 +1,22 @@
+{
+    "name": "loadmill-demo",
+    "version": "1.0.0",
+    "private": true,
+    "scripts": {
+        "backend": "nodemon backend/index.js",
+        "frontend": "cd frontend && npm start",
+        "dev": "concurrently \"npm run backend\" \"npm run frontend\"",
+        "start": "node backend/index.js",
+        "heroku-postbuild": "cd frontend && npm install && npm run build"
+    },
+    "dependencies": {
+        "@loadmill/node-recorder": "^0.3.157",
+        "cors": "^2.8.5",
+        "express": "^4.21.2",
+        "path": "^0.12.7"
+    },
+    "devDependencies": {
+        "concurrently": "^8.0.0",
+        "nodemon": "^2.0.0"
+    }
+}
