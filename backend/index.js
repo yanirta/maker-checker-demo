@@ -14,6 +14,8 @@ app.use(expressRecorder({
     basePath: 'https://maker-checker-036efc6aec77.herokuapp.com'
 }));
 
+app.use(express.json());
+
 // ----- In-memory data -----
 const users = [
   { username: 'maker', password: 'maker1234!', role: 'maker' },
