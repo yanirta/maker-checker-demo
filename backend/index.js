@@ -12,6 +12,7 @@ app.use(expressRecorder({
     basePath: 'https://maker-checker-036efc6aec77.herokuapp.com'
 }));
 
+// Must come after the Loadmill recorder for raw body capture
 app.use(express.json());
 
 // ----- In-memory data -----
